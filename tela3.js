@@ -7,6 +7,12 @@ function mostrarHorario() {
     horario.innerHTML = `${hora}:${minutos}:${segundos}`
 }
 
+let strobeativo = false;
+
+function mudarcor() {
+    strobeativo = true
+}
+
 function digitacao(horario, texto, velocidade){
     return new Promise((resolve) => {
         const medo = document.getElementById(horario);
@@ -25,8 +31,17 @@ function digitacao(horario, texto, velocidade){
 }
 
 async function iniciarDigitacao() {
+    const strobe = setInterval(() => {
+        backgroundColor = strobeativo ? 'lightblue' : 'purple';
+            document.body.style.backgroundColor = backgroundColor;
+                strobeativo = !strobeativo;
+    }, 50);
+    await new Promise(resolve => setTimeout(resolve, 4000));
+    clearInterval(strobe);
+        document.body.style.backgroundColor = 'black';
     await digitacao('horario', `${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`, 100);
     setInterval(mostrarHorario, 1000)
-    
+    document.getElementById("rosto").style.opacity = "1";
 }
+
 iniciarDigitacao();

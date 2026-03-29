@@ -15,3 +15,39 @@ body {
     text-align: center;
 
 }
+
+@keyframes respiracao{
+0%   { transform: scale(1); }
+50%  { transform: scale(1.04); }
+100% { transform: scale(1); }
+}
+
+@keyframes tremer{
+    0% {translate: 0px 0px;}
+    25% {translate: 2px 2px;}
+    50% {translate: -2px -2px;}
+    75% {translate: 2px -2px;}
+    100% {translate: 0px 0px;}
+}
+
+@keyframes escorregas{
+    0% {transform: scaleY(1.0) translateY(0px);}
+    50% {transform: scaleY(1.2) translateY(20px);}
+    100% {transform: scaleY(1.0) translateY(0px);}
+}
+
+#svgg{
+    animation: escorregas 6s infinite;
+}
+
+#rosto{
+width: 500px;
+position: fixed;
+top: 20%;
+left: 30%;
+opacity: 0%;
+transition: opacity 2s;
+animation: respiracao 4s infinite, tremer 2s infinite;
+}
+
+
