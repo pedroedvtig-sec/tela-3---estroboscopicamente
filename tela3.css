@@ -36,6 +36,14 @@ body {
     100% {transform: scaleY(1.0) translateY(0px);}
 }
 
+@keyframes saida{
+    0% {translate: 0px 0px;}
+    25% {translate: 15px -8px;}
+    50% {translate: -10px -8px;}
+    75% {translate: 10px -2px;}
+    100% {translate: 15px 10px;}
+}
+
 #svgg{
     animation: escorregas 6s infinite;
 }
@@ -60,6 +68,11 @@ animation: respiracao 4s infinite, tremer 2s infinite;
 
 #tela{
     position: relative;
+}
+
+#glitch{
+    animation: saida 0.5s infinite;
+    animation-play-state: paused;
 }
 
 #mao{

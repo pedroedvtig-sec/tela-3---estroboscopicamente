@@ -44,6 +44,8 @@ async function iniciarDigitacao() {
         document.getElementById("rosto").style.opacity = "1";
         await new Promise(resolve => setTimeout(resolve, 4000));
             document.getElementById("mao").style.animationPlayState = "running";
+            await new Promise (resolve => setTimeout(resolve, 1200));
+                document.getElementById("glitch").style.animationPlayState = "running";
         await new  Promise(resolve => setTimeout(resolve, 2000));
             document.getElementById("mao").style.left = "-1400px";
             document.getElementById("rosto").style.left = "-1400px";
