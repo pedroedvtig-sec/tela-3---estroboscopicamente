@@ -50,4 +50,22 @@ transition: opacity 2s;
 animation: respiracao 4s infinite, tremer 2s infinite;
 }
 
+@keyframes maoo{
+    0% {transform: translateX(-600px);}
+    25% {transform: translateX(-500);}
+    50% {transform: translateX(-150px);}
+    75% {transform: translateX(150px);}
+    100% {transform: translateX(600px);}
+}
 
+#tela{
+    position: relative;
+}
+
+#mao{
+width: 750px;
+position: absolute;
+left: 0px;
+animation: maoo 2s forwards;
+animation-play-state: paused;
+}
