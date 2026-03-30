@@ -82,3 +82,39 @@ left: 0px;
 animation: maoo 2s forwards;
 animation-play-state: paused;
 }
+
+#rosto-copia1{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    filter: hue-rotate(180deg) saturate(3);
+    animation: saida 0.5s infinite;
+    animation-play-state: paused;
+}
+
+#rosto-copia2{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    filter: hue-rotate(270deg) saturate(3);
+    animation: saida 0.5s infinite;
+    animation-play-state: paused;
+}
+
+#glitch-copia1{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    filter: hue-rotate(180deg) saturate(3);
+    animation: saida 0.5s infinite;
+    animation-play-state: paused;    
+}
+
+#glitch-copia2{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    filter: hue-rotate(270deg) saturate(3);
+    animation: saida 0.5s infinite;
+    animation-play-state: paused;    
+}
