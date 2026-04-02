@@ -63,6 +63,9 @@ async function iniciarDigitacao() {
         await new  Promise(resolve => setTimeout(resolve, 700));
             document.getElementById("mao").style.left = "-1400px";
             document.getElementById("rosto").style.left = "-1400px";
+
+        await new  Promise(resolve => setTimeout(resolve, 5000));
+            window.location.href = "../sensenetV2/icebreakerV2.html"
     }
 
 iniciarDigitacao();
